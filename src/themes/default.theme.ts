@@ -2,13 +2,13 @@ import { createTheme } from "@mui/material";
 
 const palette = {
     primary: {
-        main: "#2881ff",
+        main: "#2881FF",
     },
     secondary: {
-        main: "#f4f9ff",
+        main: "#F4F9FF",
     },
     font: {
-        primary: "#c0b9cb",
+        primary: "#878B95",
         white: "#FFFFFF",
         error: "#FFF1EE",
         warning: "#FEF5C5",
@@ -28,10 +28,9 @@ const typography = {
         fontWeight: 500,
         color: palette.primary.main,
     },
-    h2: {
-        fontSize: "1.5rem",
-        fontWeight: 500,
-        color: palette.primary.main,
+    h3: {
+        fontSize: "20px",
+        color: palette.font.primary,
     },
 };
 
@@ -65,11 +64,15 @@ const components = {
     MuiInput: {
         styleOverrides: {
             root: {
-                // ":hover:not(.Mui-disabled, .Mui-error):before": {
-                //     borderBottom: 0,
-                // },
+                ":hover:not(.Mui-disabled, .Mui-error):before": {
+                    borderBottom: "2px dashed rgba(40, 129, 255, 0.7)",
+                },
                 ":before": {
-                    borderBottom: "2px dashed rgba(0, 0, 0, 0.42)",
+                    borderBottom: "2px dashed rgba(0, 0, 0, 0.3)",
+                },
+                ":after": {
+                    borderBottom: "2px dashed rgba(40, 129, 255, 0.7)",
+                    transition: "none",
                 },
             },
         },

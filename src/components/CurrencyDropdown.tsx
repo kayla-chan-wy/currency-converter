@@ -1,6 +1,6 @@
-import { Box, FormControl, MenuItem, Select, SelectChangeEvent, Stack, Typography } from "@mui/material";
+import { Box, MenuItem, Select, SelectChangeEvent, Stack, Typography } from "@mui/material";
 import React from "react";
-import { AU, CA, CH, CN, EU, GB, HK, JP, NZ, US } from 'country-flag-icons/react/3x2'
+import { AU, CA, CH, EU, GB, HK, JP, KR, NZ, US } from 'country-flag-icons/react/3x2'
 
 interface CurrencyDropdownProps {
     defaultCurrency: string;
@@ -25,10 +25,6 @@ export default function CurrencyDropdown({
             icon: <CH />,
         },
         {
-            code: "CNH",
-            icon: <CN />,
-        },
-        {
             code: "EUR",
             icon: <EU />,
         },
@@ -45,6 +41,10 @@ export default function CurrencyDropdown({
             icon: <JP />,
         },
         {
+            code: "KRW",
+            icon: <KR />,
+        },
+        {
             code: "NZD",
             icon: <NZ />,
         },
@@ -58,6 +58,7 @@ export default function CurrencyDropdown({
         <Select
             variant="standard"
             value={defaultCurrency}
+            sx={{ width: "120px" }}
             onChange={(event: SelectChangeEvent) => {
                 selectedCurrency(event.target.value);
             }}
