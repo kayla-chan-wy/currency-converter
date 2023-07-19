@@ -2,14 +2,14 @@ import { createTheme } from "@mui/material";
 
 const palette = {
     primary: {
-        main: "#2881FF",
+        main: "#884ffb",
     },
     secondary: {
         main: "#F4F9FF",
     },
     font: {
-        primary: "#878B95",
-        white: "#FFFFFF",
+        primary: "#9b9aba",
+        title: "#474d58",
         error: "#FFF1EE",
         warning: "#FEF5C5",
         sky: "#F2F5F6",
@@ -20,24 +20,35 @@ const palette = {
 
 const typography = {
     color: palette.font.primary,
-    fontFamily: "Arimo",
+    fontFamily: "Mulish",
     fontWeightRegular: 500,
     fontWeight: "regular",
     h1: {
-        fontSize: "2rem",
-        fontWeight: 500,
-        color: palette.primary.main,
+        fontSize: "22px",
+        fontWeight: 600,
+        color: palette.font.title,
     },
     h3: {
-        fontSize: "20px",
+        fontSize: "16px",
+        fontWeight: 500,
         color: palette.font.primary,
+        letterSpacing: "0.5px"
     },
 };
 
 const components = {
+    MuiCard: {
+        styleOverrides: {
+            root: {
+                boxShadow: "none",
+                borderRadius: "16px",
+            }
+        }
+    },
     MuiSelect: {
         styleOverrides: {
             root: {
+                color: palette.font.title,
                 ":hover:not(.Mui-disabled, .Mui-error):before": {
                     borderBottom: 0,
                 },
@@ -57,22 +68,26 @@ const components = {
         styleOverrides: {
             input: {
                 fontSize: "30px",
-                width: "180px",
+                width: "150px",
             },
         },
     },
     MuiInput: {
         styleOverrides: {
             root: {
+                color: palette.font.title,
                 ":hover:not(.Mui-disabled, .Mui-error):before": {
-                    borderBottom: "2px dashed rgba(40, 129, 255, 0.7)",
+                    borderBottom: "2px dashed rgba(136, 79, 251, 0.7)",
                 },
                 ":before": {
-                    borderBottom: "2px dashed rgba(0, 0, 0, 0.3)",
+                    borderBottom: `2px dashed ${palette.font.primary}`,
                 },
                 ":after": {
-                    borderBottom: "2px dashed rgba(40, 129, 255, 0.7)",
+                    borderBottom: "2px dashed rgba(136, 79, 251, 0.7)",
                     transition: "none",
+                },
+                ":focus, :focus-within, :active, :target": {
+                    color: palette.primary.main,
                 },
             },
         },

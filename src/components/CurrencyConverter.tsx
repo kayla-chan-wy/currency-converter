@@ -4,7 +4,7 @@ import CurrencyDropdown from "./CurrencyDropdown";
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 
 export default function CurrencyConverter() {
-    const [buyAmount, setBuyAmount] = React.useState<number>(100);
+    const [buyAmount, setBuyAmount] = React.useState<number>(1000);
     const [sellAmount, setSellAmount] = React.useState<number>(0);
     const [buyCurrency, setBuyCurrency] = React.useState<string>("GBP");
     const [sellCurrency, setSellCurrency] = React.useState<string>("USD");
@@ -76,27 +76,37 @@ export default function CurrencyConverter() {
     return (
         <Box>
             <Typography variant="h1">Currency Converter</Typography>
-            <Card sx={{ width: "600px" }}>
+            <Card sx={{ width: "550px", padding: "30px 0" }}>
                 <CardContent>
                     <Stack direction="row" spacing={4} justifyContent="center" alignItems="center">
-                        <Stack spacing={2} justifyContent="center" alignItems="center">
+                        <Stack spacing={3} justifyContent="center" alignItems="center">
                             <Typography variant="h3">Buy</Typography>
                             <TextField 
                                 variant="standard" 
                                 type="number"
-                                value={buyAmount} 
+                                value={Number(buyAmount.toFixed(2))} 
                                 inputProps={{min: 0, style: { textAlign: 'center' }}}
                                 onChange={handleBuyAmountChange} 
                             />
                             <CurrencyDropdown defaultCurrency={buyCurrency} selectedCurrency={handleBuyCurrencyChange} />
                         </Stack>
-                        <CurrencyExchangeIcon onClick={switchCurrency} />
-                        <Stack spacing={2} justifyContent="center" alignItems="center">
+                        <CurrencyExchangeIcon 
+                            sx={{ 
+                                cursor: "pointer",
+                                color: "#9b9aba", 
+                                fontSize: "28px", 
+                                ":hover": {
+                                    color: "#884ffb",
+                                } 
+                            }}
+                            onClick={switchCurrency} 
+                        />
+                        <Stack spacing={3} justifyContent="center" alignItems="center">
                             <Typography variant="h3">Sell</Typography>
                             <TextField 
                                 variant="standard" 
                                 type="number"
-                                value={sellAmount} 
+                                value={Number(sellAmount.toFixed(2))} 
                                 inputProps={{min: 0, style: { textAlign: 'center' }}}
                                 onChange={handleSellAmountChange} 
                             />

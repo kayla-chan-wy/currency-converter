@@ -58,7 +58,7 @@ export default function CurrencyDropdown({
         <Select
             variant="standard"
             value={defaultCurrency}
-            sx={{ width: "120px" }}
+            sx={{ width: "100px" }}
             onChange={(event: SelectChangeEvent) => {
                 selectedCurrency(event.target.value);
             }}
@@ -66,10 +66,10 @@ export default function CurrencyDropdown({
             {currencies.map(({ code, icon }) => (
                 <MenuItem value={code}>
                     <Stack direction="row" spacing={1} justifyContent="center" alignItems="center">
-                        <Box sx={{ display: "flex", width: "24px" }}>
+                        <Box sx={{ display: "flex", width: "20px" }}>
                             {icon}
                         </Box>
-                        <Typography fontSize="20px">{code}</Typography>
+                        <Typography fontSize="16px" fontWeight="600">{code}</Typography>
                     </Stack>
                 </MenuItem>
             ))}
