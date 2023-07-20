@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Stack, TextField, Typography } from "@mui/material";
+import { Card, CardContent, Link, Stack, TextField, Typography } from "@mui/material";
 import React from "react";
 import CurrencyDropdown from "./CurrencyDropdown";
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
@@ -74,8 +74,11 @@ export default function CurrencyConverter() {
     };
 
     return (
-        <Box>
-            <Typography variant="h1">Currency Converter</Typography>
+        <Stack spacing={4} padding="50px 0">
+            <Typography variant="h1" sx={{ textAlign: "center" }}>Currency Converter</Typography>
+            <Typography sx={{ fontSize: "14px", color: "#474d58", textAlign: "center" }}>
+                Easily convert between different currencies and calculate exchange rates based on current market rates. Big kudos to <Link href="https://github.com/fawazahmed0/currency-api" target="_blank">this</Link> open source library, I get the latest exchange rate data from it via an API call. 
+            </Typography>
             <Card sx={{ width: "550px", padding: "30px 0" }}>
                 <CardContent>
                     <Stack direction="row" spacing={4} justifyContent="center" alignItems="center">
@@ -115,6 +118,6 @@ export default function CurrencyConverter() {
                     </Stack>
                 </CardContent>
             </Card>
-        </Box>
+        </Stack>
     );
 }

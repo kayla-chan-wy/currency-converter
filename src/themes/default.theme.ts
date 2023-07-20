@@ -24,7 +24,7 @@ const typography = {
     fontWeightRegular: 500,
     fontWeight: "regular",
     h1: {
-        fontSize: "22px",
+        fontSize: "28px",
         fontWeight: 600,
         color: palette.font.title,
     },
