@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Currency Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React app built with Typescript and Material UI that allows you to convert between different currencies and calculate exchange rates based on the current market rates.
+
+To try out the app, please click [here](https://kayla-chan-wy.github.io/currency-converter).
+
+## Features
+* Convert between different currencies
+* Calculate exchange rates based on current market rates
+* User-friendly interface with Material UI components
+* Accurate and up-to-date exchange rate data from an open source library via an API call
+
+## Acknowledgements
+I'm grateful to be able to use [this open source library](https://github.com/fawazahmed0/currency-api) to get the latest exchange rate data via API calls. This helps us provide accurate and up-to-date exchange rate information to our users. Thank you to the developers of this library for making it available to us and the wider community.
 
 ## Available Scripts
 
