@@ -1,14 +1,21 @@
 # Currency Converter
 
-This is a React app built with Typescript and Material UI that allows you to convert between different currencies and calculate exchange rates based on the current market rates.
+Welcome to Currency Converter, a powerful web application built with React JS, TypeScript, and Material UI. The Currency Converter allows you to effortlessly convert between different currencies by choosing your buy and sell currencies from dropdowns. It fetches the latest exchange rates from a free open-source API library, ensuring you get accurate and up-to-date currency conversions.
 
 To try out the app, please click [here](https://kayla-chan-wy.github.io/currency-converter).
 
 ## Features
-* Convert between different currencies
-* Calculate exchange rates based on current market rates
-* User-friendly interface with Material UI components
-* Accurate and up-to-date exchange rate data from an open source library via an API call
+* **Currency Conversion**: With Currency Converter, you can select your buy and sell currencies from the dropdowns and instantly view the converted amount based on the latest exchange rates.
+* **Real-Time Exchange Rates**: The app fetches the latest exchange rates from a free open-source API library, ensuring accurate conversions for a wide range of currencies.
+* **User-Friendly Interface**: Currency Converter boasts an intuitive and user-friendly interface, making currency conversions a seamless experience for users of all levels.
+
+## Technologies Used
+Currency Converter is powered by cutting-edge technologies for a seamless currency conversion experience:
+
+* **React JS**: Currency Converter leverages React JS to create dynamic and interactive user interfaces, enabling smooth currency conversions.
+* **TypeScript**: By incorporating TypeScript, Currency Converter ensures type safety, improved code quality, and enhanced development productivity.
+* **Material UI**: The app utilizes Material UI, a popular React component library, to achieve a modern and visually appealing design.
+* **Free Open Source API Library**: Currency Converter fetches real-time exchange rate data from a reliable free open-source API library.
 
 ## Acknowledgements
 I'm grateful to be able to use [this open source library](https://github.com/fawazahmed0/currency-api) to get the latest exchange rate data via API calls. This helps us provide accurate and up-to-date exchange rate information to our users. Thank you to the developers of this library for making it available to us and the wider community.
